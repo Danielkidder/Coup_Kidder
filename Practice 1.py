@@ -45,3 +45,86 @@ Instructions:
 # Open the file `abab.txt` and print the following:
     # the longest sequence of 'a's in the file
     # the longest sequence of 'b's in the file
+    #!/usr/bin/env python3
+    # -*- coding: utf-8 -*-
+"""
+    Created on Wed Jun  1 11:54:48 2022
+
+    @author: danielkidder
+    """
+'''
+    import random
+    print(random.randint(1,10)) 
+'''
+'''
+    a=1
+    while (a<101):
+        print(a**2)
+        a=a+1 
+'''
+'''
+    mylines=[]
+    with open("abab.txt","r")as myfile:
+       for myline in myfile:
+           mylines.append(myline)
+           
+           substr="b"
+           for line in mylines:
+               index=0
+               prev=0
+               while index<len(line):
+                   index=line.find(substr, index)
+                   if index==-1:
+                       break
+                   print("" * (index-prev)+ "b", end='')
+                   prev= index+len(substr)
+                   index+= len(substr)
+                   close myfile
+'''
+'''
+    myFile = open("abab.txt", "r")
+    b_count = 0
+    for character in myFile.read():
+        if character == "b":
+            b_count = b_count + 1
+    myFile.close()
+    print(b_count)
+    mylines=[]
+    with open("abab.txt","r")as myfile:
+       for myline in myfile:
+           mylines.append(myline)
+    '''      
+'''
+    myFile = open("abab.txt", "r")
+    b_cons = 0
+    a_cons = 0
+    b_highest = 0
+    for character in myFile.read():
+        if character == "b":
+            b_cons += 1
+            a_cons = 0
+        else:
+            a_cons += 1
+            b_cons = 0
+        if b_cons > b_highest:
+            b_highest = b_cons
+    myFile.close()
+    print(b_highest)
+    '''
+'''
+    myFile = open("abab.txt", "r")
+    b_cons = 0
+    a_cons = 0
+    a_highest = 0
+    for character in myFile.read():
+        if character == "a":
+            a_cons += 1
+            b_cons = 0
+        else:
+            b_cons += 1
+            a_cons = 0
+        if a_cons > a_highest:
+            a_highest = a_cons
+    myFile.close()
+    print(a_highest)
+    '''
