@@ -88,26 +88,11 @@ def problem_2_tester():
 
 
 # now call the function
-def tester_function(function,function_2,function_3,function_4,function_5,function_6):
-   function=correct_function_1()
-   function_2=correct_function_2()
-   function_3=correct_function_3()
-   function_4=incorrect_function_1()
-   function_5=incorrect_function_2()
-   function_6=incorrect_function_3()
-   if(function==correct_function_1):
+def problem_3_tester(return_value):
+    if(return_value % 8 == 0):
         return True
-   if(function_2==correct_function_2()):
-        return True
-   if(function_3==correct_function_3()):
-        return True
-   if(function_4==incorrect_function_1()):
+    else:
         return False
-   if(function_5==incorrect_function_2()):
-        return False
-   if(function_6==incorrect_function_3()):
-        return False
-        
 
 
 # Problem 3
@@ -159,14 +144,18 @@ def incorrect_function_3():
         # hint: use your trusty internet capabilities to find out what
         #       `random.shuffle()` does
         
-class deck:
+class Deck:
    def __init__(self,deck_name):
        self.name=deck_name
        self.deck=[]
+mydeck=Deck()
 
-   def add(self,card):
+def add(self,card):
        self.deck.append(card)
+       
+def show(self):    
        print(self.deck)
+       
        
 
 
@@ -225,7 +214,7 @@ class deck:
 
 
 
-   """
+"""
 Problem 6 is optional
 """
 # Problem 6 (continuing problem 5)
